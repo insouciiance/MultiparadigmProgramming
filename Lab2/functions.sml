@@ -58,7 +58,8 @@ fun number_before_reaching_sum (_, []) = 0
 (*9*)
 fun what_month (day) =
   if day > 0 andalso day < 366 then
-    number_before_reaching_sum (day, [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]) + 1   else ~1;
+    number_before_reaching_sum (day, [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]) + 1
+  else ~1;
 
 (*10*)
 fun month_range (day1, day2) =
@@ -69,4 +70,4 @@ fun month_range (day1, day2) =
 (*11*)
 fun oldest_date [] = NONE
   | oldest_date [x] = SOME x
-  | oldest_date (x::y::xs) = if is_older (x, y) then oldest_date (x::xs) else oldest_date(y :: xs);
+  | oldest_date (x::y::xs) = if is_older (x, y) then oldest_date (x::xs) else oldest_date (y::xs);
