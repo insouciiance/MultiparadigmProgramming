@@ -6,6 +6,21 @@ fun assert (expected, actual) =
     else
         raise Fail "assert failure.";
 
+(*1*)
+assert (
+    [
+        {first="Fred", last="Smith", middle="W"},
+        {first="Fredrick", last="Smith", middle="W"},
+        {first="Freddie", last="Smith", middle="W"},
+        {first="F", last="Smith", middle="W"}
+    ], similar_names(
+        [
+            ["Fred","Fredrick"],
+            ["Elizabeth","Betty"],
+            ["Freddie","Fred","F"]
+        ], {first="Fred", middle="W", last="Smith"}));
+
+(*2*)
 assert (8, officiate(
     [
         (Spades, Jack),
