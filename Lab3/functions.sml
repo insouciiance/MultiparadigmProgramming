@@ -56,8 +56,8 @@ exception IllegalMove;
 (* put your solutions for problem 2 here *)
 fun card_color(suit, _) =
    case suit of
-      (Spades | Diamonds) => Black
-    | (Hearts | Clubs) => Red;
+      (Spades | Clubs) => Black
+    | (Hearts | Diamonds) => Red;
    
 fun card_value(_, rank) : int =
    case rank of

@@ -6,7 +6,6 @@ fun assert (expected, actual) =
     else
         raise Fail "assert failure.";
 
-(*1*)
 assert (
     [
         {first="Fred", last="Smith", middle="W"},
@@ -20,12 +19,11 @@ assert (
             ["Freddie","Fred","F"]
         ], {first="Fred", middle="W", last="Smith"}));
 
-(*2*)
 assert (8, officiate(
     [
         (Spades, Jack),
         (Spades, Ace),
-        (Clubs, Ace),
+        (Diamonds, Ace),
         (Hearts, Num(2))
     ],
     [
@@ -41,7 +39,7 @@ assert (6, officiate(
     [
         (Spades, Jack),
         (Spades, Ace),
-        (Clubs, Ace),
+        (Diamonds, Ace),
         (Hearts, Num(2))
     ],
     [
@@ -57,8 +55,8 @@ assert (3, officiate(
     [
         (Spades, Jack),
         (Spades, Ace),
-        (Diamonds, Ace),
-        (Diamonds, Num(2))
+        (Clubs, Ace),
+        (Clubs, Num(2))
     ],
     [
         Draw,
